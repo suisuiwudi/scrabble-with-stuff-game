@@ -6,6 +6,7 @@ public class Controller {
 	private ArrayList<Player> players;
 	private int order;
 	private int playersNum;
+	private Player currentPlayer;
 	public Controller(){
 		order = 1;
 	}
@@ -15,6 +16,10 @@ public class Controller {
 	}
 	public void reverseOrder(){
 		order = -1;
+	}
+	
+	public Player currentPlayer(){
+		return currentPlayer;
 	}
 	public Player nextPlayer(){
 		return new Player("1");

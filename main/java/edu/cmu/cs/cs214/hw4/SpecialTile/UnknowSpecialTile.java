@@ -3,14 +3,14 @@ package edu.cmu.cs.cs214.hw4.SpecialTile;
 import edu.cmu.cs.cs214.hw4.GameSystem;
 import edu.cmu.cs.cs214.hw4.Square;
 
-public class UnknowSpecialTile extends EmptySpecialTile{
+public class UnknowSpecialTile extends SpecialTile{
 	private static final int PRICE = 30;
 	private static final String NAME = "Unknown";
 	public UnknowSpecialTile(){
 		super();
 	}
 	@Override
-	public String getName() {
+	public String getSpecialTileName() {
 		// TODO Auto-generated method stub
 		return NAME;
 	}

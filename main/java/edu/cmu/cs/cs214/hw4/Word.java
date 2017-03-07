@@ -17,7 +17,9 @@ public class Word {
 		wordBonus = 1;
 		
 	}
-
+	public void getValue(){
+		
+	}
 	public void addValue(int tileValue){
 		
 	}

@@ -1,5 +1,6 @@
 package edu.cmu.cs.cs214.hw4;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,11 +13,13 @@ public class GameSystem {
 	private LinkedList<Player> players;
 	private int order;
 	private Board board;
+	private Controller controller; 
 
 	public GameSystem() {
 		dict = new Dictionary(PATH);
 		firstMove = true;
 		board = new Board(dict);
+		controller = new Controller();
 
 	}
 
@@ -39,15 +42,35 @@ public class GameSystem {
 			board.checkMatchBoard(move);
 			board.checkJoint(move);
 			
-			List<Square> specialTiles = board.checkSpecialTile(move);
-			activeSpecialTile(specialTiles);
+			
 			
 		}
 	}
-	public void activeSpecialTile(List<Square> specialTiles){
+	public void activeSpecialTile(Move move){
 		//TO DO
+		ArrayList<Square> specialTiles = board.checkSpecialTile(move);
+		//getBoom
+		for (Square tile:specialTiles){
+			if (tile.hasSpecialTile() && tile.getSpecialTileName() == "Boom"){
+				setBoom(tile);
+			}
+		}
+		//getExchange
+		for (Square tile:specialTiles){
+			if (tile.hasSpecialTile() && tile.getSpecialTileName() == "Exchange"){
+				setExchange(controller.currentPlayer());
+			}
+		}
+		//reverse
+		
+		//negative 
 	}
-	
+	public void setLetterTile(Move move){
+		board.setLetterTiles(move);
+	}
+	public void setSpecialTile(){
+		
+	}
 	public void chanllege(){
 		
 	}

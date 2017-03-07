@@ -26,5 +26,16 @@ public abstract class Square {
 	public int getY(){
 		return y;
 	}
-
+	public char getLetterTileName(){
+		return '\0';
+	}
+	public String getSpecialTileName(){
+		return "";
+	}
+	public String getNormalTileName(){
+		return "";
+	}
+	public Player getOwner(){
+		return new Player("dummy");
+	}
 }

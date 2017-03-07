@@ -3,14 +3,14 @@ package edu.cmu.cs.cs214.hw4.SpecialTile;
 import edu.cmu.cs.cs214.hw4.GameSystem;
 import edu.cmu.cs.cs214.hw4.Square;
 
-public class NegativeSpecialTile extends EmptySpecialTile{
+public class NegativeSpecialTile extends SpecialTile{
 	private static final int PRICE = 30;
 	private static final String NAME = "Negative";
 	public NegativeSpecialTile(){
 		super();
 	}
 	@Override
-	public String getName() {
+	public String getSpecialTileName() {
 		// TODO Auto-generated method stub
 		return NAME;
 	}

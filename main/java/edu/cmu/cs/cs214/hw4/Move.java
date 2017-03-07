@@ -7,11 +7,11 @@ import java.util.HashSet;
 public class Move {
 
 	private static final int BOARD_SIZE = 15;
-	private ArrayList<Square> letterTilesList;
+	private ArrayList<BoardLetterTile> letterTilesList;
 	private Word word;
 	private boolean specialTileMove;
 	private Player player;
-	public Move(ArrayList<Square> letterTilesList, Player player){
+	public Move(ArrayList<BoardLetterTile> letterTilesList, Player player){
 		this.letterTilesList = letterTilesList;
 		this.specialTileMove = false;
 		this.player = player;
@@ -39,7 +39,7 @@ public class Move {
 	public Player getPlayer(){
 		return player;
 	}
-	public ArrayList<Square> getLetterTiles(){
+	public ArrayList<BoardLetterTile> getLetterTiles(){
 		return letterTilesList;
 	}
 }

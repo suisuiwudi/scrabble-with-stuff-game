@@ -6,13 +6,17 @@ public class Player {
 	private int score;
 	private ArrayList<LetterTile> tiles;
 	private String name;
-	public Player(String name){
+
+	public Player(String name) {
 		this.name = name;
 	}
-	public ArrayList<LetterTile> getLetters(){
+
+	public ArrayList<LetterTile> getLetters() {
 		return tiles;
 	}
-	public String getName(){
+
+	public String getName() {
 		return name;
 	}
+
 }

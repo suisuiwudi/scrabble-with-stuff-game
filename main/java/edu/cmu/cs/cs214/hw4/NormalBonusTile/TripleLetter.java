@@ -4,7 +4,7 @@ package edu.cmu.cs.cs214.hw4.NormalBonusTile;
 import edu.cmu.cs.cs214.hw4.Square;
 
 
-public class TripleLetter extends EmptyNormalBonus {
+public class TripleLetter extends NormalBonus {
 	private final static String TRIPLE_LETTER = "3TL";
 	private Square square;
 	public TripleLetter(Square square){
@@ -16,7 +16,7 @@ public class TripleLetter extends EmptyNormalBonus {
 		return true;
 	}
 	@Override
-	public String getNormalTileType() {
+	public String getNormalTileName() {
 		// TODO Auto-generated method stub
 		return TRIPLE_LETTER;
 	}

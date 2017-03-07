@@ -3,14 +3,15 @@ package edu.cmu.cs.cs214.hw4.SpecialTile;
 import edu.cmu.cs.cs214.hw4.GameSystem;
 import edu.cmu.cs.cs214.hw4.Square;
 
-public class BoomSpecialTile extends EmptySpecialTile{
+public class BoomSpecialTile extends SpecialTile{
+	private Square square;
 	private static final int PRICE = 30;
 	private static final String NAME = "Boom";
-	public BoomSpecialTile(){
-		super();
+	public BoomSpecialTile(Square square){
+		this.square = square;
 	}
 	@Override
-	public String getName() {
+	public String getSpecialTileName() {
 		// TODO Auto-generated method stub
 		return NAME;
 	}

@@ -4,7 +4,7 @@ package edu.cmu.cs.cs214.hw4.NormalBonusTile;
 import edu.cmu.cs.cs214.hw4.Square;
 
 
-public class DoubleWord extends EmptyNormalBonus {
+public class DoubleWord extends NormalBonus {
 	private final static String DOUBLE_WORD = "2LW";
 	private Square square;
 	public DoubleWord(Square square){
@@ -16,7 +16,7 @@ public class DoubleWord extends EmptyNormalBonus {
 		return true;
 	}
 	@Override
-	public String getNormalTileType() {
+	public String getNormalTileName() {
 		// TODO Auto-generated method stub
 		return DOUBLE_WORD;
 	}
