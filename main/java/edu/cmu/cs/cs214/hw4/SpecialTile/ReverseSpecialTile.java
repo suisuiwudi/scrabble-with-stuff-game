@@ -1,30 +1,21 @@
 package edu.cmu.cs.cs214.hw4.SpecialTile;
 
 import edu.cmu.cs.cs214.hw4.GameSystem;
+import edu.cmu.cs.cs214.hw4.Player;
 import edu.cmu.cs.cs214.hw4.Square;
 
 public class ReverseSpecialTile extends SpecialTile{
+
 	private static final int PRICE = 30;
 	private static final String NAME = "Reverse";
-	public ReverseSpecialTile(){
-		super();
+	public ReverseSpecialTile(Square square, Player player) {
+		super(square, player);
+		// TODO Auto-generated constructor stub
 	}
 	@Override
-	public String getSpecialTileName() {
+	public String getName() {
 		// TODO Auto-generated method stub
-		return NAME;
-	}
-
-	@Override
-	public int getPrice() {
-		// TODO Auto-generated method stub
-		return PRICE;
-	}
-
-	@Override
-	public void activeSpecialEffect(GameSystem gameSystem, Square square) {
-		// TODO Auto-generated method stub
-		gameSystem.setReverse();
+		return super.getSquare().getName()+" "+super.getOwner().getName()+":"+NAME;
 	}
 	
 }

@@ -4,14 +4,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
+import edu.cmu.cs.cs214.hw4.SpecialTile.SpecialTile;
+
 public class Move {
 
 	private static final int BOARD_SIZE = 15;
-	private ArrayList<BoardLetterTile> letterTilesList;
+	private ArrayList<Square> letterTilesList;
 	private Word word;
 	private boolean specialTileMove;
+	private SpecialTile specialTile;
 	private Player player;
-	public Move(ArrayList<BoardLetterTile> letterTilesList, Player player){
+	public Move(ArrayList<Square> letterTilesList, Player player){
 		this.letterTilesList = letterTilesList;
 		this.specialTileMove = false;
 		this.player = player;
@@ -39,7 +42,10 @@ public class Move {
 	public Player getPlayer(){
 		return player;
 	}
-	public ArrayList<BoardLetterTile> getLetterTiles(){
+	public ArrayList<Square> getLetterTiles(){
 		return letterTilesList;
+	}
+	public SpecialTile getSpecialTile(){
+		return specialTile;
 	}
 }

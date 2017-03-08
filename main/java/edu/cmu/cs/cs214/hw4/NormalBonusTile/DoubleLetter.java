@@ -6,17 +6,12 @@ import edu.cmu.cs.cs214.hw4.Square;
 
 public class DoubleLetter extends NormalBonus {
 	private final static String DOUBLE_LETTER = "2LS";
-	private Square square;
-	public DoubleLetter(Square square){
-		this.square = square;
+	
+	public DoubleLetter(int x, int y){
+		super(x,y);
 	}
-	@Override
-	public boolean hasNormalTile() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-	@Override
-	public String getNormalTileName() {
+
+	public String getName() {
 		// TODO Auto-generated method stub
 		return DOUBLE_LETTER;
 	}
