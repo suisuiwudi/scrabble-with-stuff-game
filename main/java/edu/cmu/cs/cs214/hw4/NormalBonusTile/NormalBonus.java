@@ -4,8 +4,8 @@ import edu.cmu.cs.cs214.hw4.LetterTile;
 import edu.cmu.cs.cs214.hw4.Square;
 import edu.cmu.cs.cs214.hw4.Word;
 
-public abstract class NormalBonus extends Square {
-
-	public abstract boolean hasNormalTile();
-	public abstract String getNormalTileName();
+public interface NormalBonus{
+	
+	public void changeWordValue(Word word, LetterTile letterTile);
+	public abstract String getName();
 }

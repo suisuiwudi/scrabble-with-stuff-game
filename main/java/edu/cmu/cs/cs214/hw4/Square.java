@@ -1,41 +1,60 @@
 package edu.cmu.cs.cs214.hw4;
 
+import java.util.ArrayList;
 
-public abstract class Square {
+import edu.cmu.cs.cs214.hw4.NormalBonusTile.NormalBonus;
+import edu.cmu.cs.cs214.hw4.NormalBonusTile.OneWord;
+import edu.cmu.cs.cs214.hw4.SpecialTile.SpecialTile;
+
+public class Square {
 	private int x;
 	private int y;
-	public void setX(int x){
+	private ArrayList<SpecialTile> specialTiles;
+	private NormalBonus normalBonus;
+	private LetterTile letterTile;
+	public Square(int x, int y){
 		this.x = x;
-	}
-	public void setY(int y){
 		this.y = y;
-	}
-	public boolean hasLetterTile(){
-		return false;
-	}
-	public boolean hasSpecialTile() {
-		return false;
-	}
-	public boolean hasNormalTile(){
-		return false;
+		specialTiles = new ArrayList<>();
+		letterTile = null;
+		normalBonus = new OneWord();
 	}
 
+	public void setLetterTile(LetterTile letterTile){
+		this.letterTile = letterTile;
+	}
+	public void unsetLetterTile(){
+		this.letterTile = null;
+	}
+	public void setNormalBonus(NormalBonus normalBonus){
+		this.normalBonus = normalBonus;
+	}
+	public void setSpecialTile(SpecialTile specialTile){
+		specialTiles.add(specialTile);
+	}
 	public int getX(){
 		return x;
 	}
 	public int getY(){
 		return y;
 	}
-	public char getLetterTileName(){
-		return '\0';
+	public ArrayList<SpecialTile> getSpecialTile(){
+		return specialTiles;
 	}
-	public String getSpecialTileName(){
-		return "";
+	public boolean hasSpecialTile(){
+		return specialTiles.size() > 0;
 	}
-	public String getNormalTileName(){
-		return "";
+	public NormalBonus getNormalBonus(){
+		return normalBonus;
 	}
-	public Player getOwner(){
-		return new Player("dummy");
+	public boolean hasNormalBonus(){
+		return normalBonus != null;
 	}
+	public LetterTile getLetterTile(){
+		return letterTile;
+	}
+	public boolean hasLetterTile(){
+		return letterTile != null;
+	}
+	
 }

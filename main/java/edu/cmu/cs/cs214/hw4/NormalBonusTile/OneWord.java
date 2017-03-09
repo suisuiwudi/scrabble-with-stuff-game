@@ -5,16 +5,17 @@ import edu.cmu.cs.cs214.hw4.LetterTile;
 import edu.cmu.cs.cs214.hw4.Word;
 
 
-public class DoubleLetter extends EmptyNormalBonus {
-	private final static String DOUBLE_LETTER = "2LS";
-	public DoubleLetter(){
+public class OneWord extends EmptyNormalBonus {
+	private final static String ONE_WORD = " . ";
+
+	public OneWord(){
 		super();
 	}
 
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return DOUBLE_LETTER;
+		return ONE_WORD;
 	}
 	@Override
 	public void changeWordValue(Word word, LetterTile letterTile) {

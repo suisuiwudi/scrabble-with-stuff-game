@@ -4,21 +4,30 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
+import edu.cmu.cs.cs214.hw4.SpecialTile.SpecialTile;
+
 public class Move {
 
 	private static final int BOARD_SIZE = 15;
-	private ArrayList<BoardLetterTile> letterTilesList;
+	private ArrayList<Square> letterTilesList;
 	private Word word;
-	private boolean specialTileMove;
 	private Player player;
-	public Move(ArrayList<BoardLetterTile> letterTilesList, Player player){
+	private SpecialTile specialTile;
+	private int specialTileX;
+	private int specialTileY;
+	public Move(ArrayList<Square> letterTilesList, Player player){
 		this.letterTilesList = letterTilesList;
-		this.specialTileMove = false;
+		this.specialTile = null;
 		this.player = player;
 	}
-//	public Move(int[] specialTilePosition, SpecialTile specialTile){
-//		this.specialTileMove = true;
-//	}
+	public void setSpecialTile(int x, int y, SpecialTile specialTile){
+		specialTileX = x;
+		specialTileY = y;
+		this.specialTile = specialTile;
+	}
+	public void setLetterTiles(ArrayList<Square> letterTilesList){
+		this.letterTilesList = letterTilesList;
+	}
 	public boolean isOneLine(){
 		int x = -1;
 		int y = -1;
@@ -39,7 +48,19 @@ public class Move {
 	public Player getPlayer(){
 		return player;
 	}
-	public ArrayList<BoardLetterTile> getLetterTiles(){
+	public ArrayList<Square> getLetterTiles(){
 		return letterTilesList;
+	}
+	public boolean hasSpecialTile(){
+		return specialTile != null;
+	}
+	public SpecialTile getSpecialTile(){
+		return specialTile;
+	}
+	public int getSpeicalTileX(){
+		return specialTileX;
+	}
+	public int getSpecialTileY(){
+		return specialTileY;
 	}
 }

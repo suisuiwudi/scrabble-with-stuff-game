@@ -5,22 +5,33 @@ import java.util.ArrayList;
 
 public class Word {
 	private int value;
-	private Square startSquare;
+	private int x;
+	private int y;
 	private int direction;
 	private int length;
 	private int wordBonus;
-	public Word(Square startSquare, int directoin){
-		this.startSquare =startSquare;
+	private String word;
+	public Word(int x, int y, int direction, String word, int value){
+		this.x = x;
+		this.y = y;
 		this.direction = direction;
-		value = 0;
-		length = 0;
-		wordBonus = 1;
-		
+		this.word = word;
+		this.value = value;
 	}
-	public void getValue(){
-		
+	public int getValue(){
+		return value;
 	}
 	public void addValue(int tileValue){
 		
 	}
+	public int getX(){
+		return x;
+	}
+	public int getY(){
+		return y;
+	}
+	public String getString(){
+		return word;
+	}
+	
 }
